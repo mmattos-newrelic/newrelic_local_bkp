@@ -1,9 +1,9 @@
 const fs = require('fs');
 const fetch = require('node-fetch');
 
-const filePath = '/Users/mmattos/OneDrive/TJMG/bkp_output.json';
-const url = 'https://insights-collector.newrelic.com/v1/accounts/1812438/events';
-const licenseKey = '42ae98f3ced04c60d500674a18cc25c56b5dae97';
+const filePath = '<path of your backup output here>/bkp_output.json';
+const url = 'https://insights-collector.newrelic.com/v1/accounts/<your account ID here>/events';
+const licenseKey = '<your license key here>';
 
 fs.readFile(filePath, 'utf8', async (err, data) => {
   if (err) {
