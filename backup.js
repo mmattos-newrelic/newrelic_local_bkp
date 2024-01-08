@@ -9,7 +9,7 @@ const query = gql`
   {
   actor {
     nrql(
-      accounts: 1812438
+      accounts: <your account number here>
       async: true
       query: "SELECT * FROM ProcessSample"
       timeout: 5
@@ -24,7 +24,7 @@ const query = gql`
 // Headers to send
 const headers = {
   'Content-Type': 'application/json',
-  'API-Key': 'NRAK-AXRIQ03JX7UI1ZYU08YNY5P2M2X'
+  'API-Key': '<your API key here>'
 };
 
 // Create a GraphQL client with custom headers
@@ -34,7 +34,7 @@ const client = new GraphQLClient(endpoint, { headers });
 client.request(query)
   .then((data) => {
     // Write the query result to a JSON file
-    const filePath = '/Users/mmattos/OneDrive/TJMG/bkp_output.json'; // Replace with your desired file path
+    const filePath = '<your json file path here>/bkp_output.json'; // Replace with your desired file path
     fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
     console.log('Query result saved to', filePath);
   })
