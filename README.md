@@ -1,7 +1,7 @@
 # newrelic_local_bkp
 Sample code to backup New Relic data in a local storage
 - This code was built using node.js
-- replace variables from these two files:
+- replace variables in these two files:
   - backup.js
   - restore.js
 
